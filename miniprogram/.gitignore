@@ -1,0 +1,30 @@
+# 忽略 HBuilderX 编译产生的文件和目录
+unpackage/
+.hbuilderx/
+.cloud/
+dist/
+
+# 忽略 Node.js 依赖文件
+node_modules/
+
+# 忽略 npm debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 忽略 MacOS 特有的系统文件
+.DS_Store
+
+# 忽略 Android 和 iOS 的平台文件
+platforms/android/
+platforms/ios/
+
+# 忽略其他不必要的文件
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.idea/
+.vscode/
+*.sublime-*
+.sourcemaps/
