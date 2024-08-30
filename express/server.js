@@ -121,11 +121,11 @@ app.get("/login", (req, res) => {
 					// });
 					// await user.save();
 					// console.log('新用户注册成功');
-					
+
 				 /**
 					* 2.第二种情况
 					* 如果用户未绑定，引导用户绑定手机号
-					*/ 
+					*/
 					return res.json({
 						code: 500,
 						message: "用户未绑定，请输入手机号进行绑定",
@@ -179,7 +179,7 @@ app.post("/bindPhone", async (req, res) => {
     }
 
     res.json({
-        message: "绑定成功",// 
+        message: "绑定成功",//
         user: {
             openId: null,
             phoneNumber: null,
@@ -196,7 +196,7 @@ protectedRoutes.get("/userInfo", (req, res) => {
 	})
 })
 // 刷新token
-protectedRoutes.get("/refresh_token", (req, res) => {
+protectedRoutes.post("/refresh_token", (req, res) => {
 	const refreshToken = req.body.refreshToken;
 	jwt.verify(refreshToken, process.env.SECRETKEY, (err, decoded) => {
 		if (err) {
